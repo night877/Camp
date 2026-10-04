@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Жанна Бессонова | Бодикоуч</title>
+
+  <!-- Красивое превью ссылки в Telegram и WhatsApp -->
+  <meta property="og:title" content="Жанна Бессонова | Бодикоуч">
+  <meta property="og:description" content="Онлайн-Кэмп 21 День • Массаж • Здоровье и фигура без диет">
+  <meta property="og:image" content="https://night877.github.io/Camp/InShot_20260902_222545986.jpg">
+  <meta property="og:url" content="https://night877.github.io/Camp/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#121316">
+
   <style>
     * {
       box-sizing: border-box;
@@ -38,7 +47,7 @@
       margin-bottom: 16px;
       background: #1c1e22;
       overflow: hidden;
-      box-shadow: 0 0 20px rgba(226, 249, 82, 0.25);
+      box-shadow: 0 0 24px rgba(226, 249, 82, 0.3);
     }
     .avatar-wrapper img {
       width: 100%;
@@ -64,7 +73,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
     .btn {
       display: flex;
@@ -81,16 +90,60 @@
     .btn:active {
       transform: scale(0.98);
     }
+
+    /* Главная кнопка Кэмпа с неоновым дыханием */
     .btn-camp {
       background-color: #e2f952;
       color: #121316;
       border: 2px solid #e2f952;
-      box-shadow: 0 4px 20px rgba(226, 249, 82, 0.35);
+      animation: pulseGlow 2.6s infinite ease-in-out;
     }
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 4px 18px rgba(226, 249, 82, 0.35);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 6px 30px rgba(226, 249, 82, 0.7);
+        transform: scale(1.015);
+      }
+    }
+
+    /* Бейдж набора */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(18, 19, 22, 0.12);
+      color: #121316;
+      border: 1px solid rgba(18, 19, 22, 0.2);
+      border-radius: 20px;
+      padding: 3px 9px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      background-color: #121316;
+      border-radius: 50%;
+      animation: dotBlink 1.4s infinite ease-in-out;
+    }
+    @keyframes dotBlink {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
     .btn-camp .btn-title {
       font-size: 16px;
       text-transform: uppercase;
       font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
     .btn-camp .btn-sub {
       font-size: 12px;
@@ -98,6 +151,8 @@
       opacity: 0.85;
       margin-top: 4px;
     }
+
+    /* Тёмные кнопки */
     .btn-dark {
       background-color: #1c1e22;
       color: #ffffff;
@@ -106,12 +161,30 @@
     .btn-dark .btn-title {
       font-size: 15px;
       font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .btn-dark .btn-sub {
       font-size: 12px;
       color: #9da3af;
       margin-top: 3px;
     }
+
+    /* Векторные иконки */
+    .icon {
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .btn-camp .icon {
+      fill: #121316;
+    }
+    .btn-dark .icon {
+      fill: #e2f952;
+    }
+
     .footer {
       margin-top: 36px;
       font-size: 12px;
@@ -134,19 +207,33 @@
     <div class="links-list">
       <!-- 1. Кэмп: Гугл-анкета -->
       <a href="https://forms.gle/TcubEVvuEKy4A11UA" target="_blank" class="btn btn-camp">
-        <span class="btn-title">Онлайн-Кэмп: 21 День</span>
+        <span class="badge">
+          <span class="pulse-dot"></span> Идёт набор на поток
+        </span>
+        <span class="btn-title">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h8l-1 8 11-12h-8l1-8z"/></svg>
+          Онлайн-Кэмп: 21 День
+        </span>
         <span class="btn-sub">Гарвардский метод • Заполнить анкету</span>
       </a>
 
       <!-- 2. Запись на массаж: Личка в Telegram -->
       <a href="https://t.me/ZHANNA_BESSONOVA" target="_blank" class="btn btn-dark">
-        <span class="btn-title">Запись на массаж</span>
+        <span class="btn-title">
+          <!-- Иконка заботы / релакса -->
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z"/></svg>
+          Запись на массаж
+        </span>
         <span class="btn-sub">Кабинет • Оздоровление и тонус</span>
       </a>
 
       <!-- 3. Telegram-канал -->
       <a href="https://t.me/zhannabessonova82" target="_blank" class="btn btn-dark">
-        <span class="btn-title">Мой Telegram-канал</span>
+        <span class="btn-title">
+          <!-- Иконка Telegram -->
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.2 1.166-.222 1.467l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.46 0 .663-.211.921-.46l2.211-2.15 4.6 3.4c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.423z"/></svg>
+          Мой Telegram-канал
+        </span>
         <span class="btn-sub">Полезные советы, разборы и закулисье</span>
       </a>
     </div>
