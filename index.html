@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Жанна Бессонова | Бодикоуч</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: #121316;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .container {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .avatar-wrapper {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      border: 3px solid #e2f952;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      background: #1c1e22;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(226, 249, 82, 0.2);
+    }
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #e2f952;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 20px;
+      text-decoration: none;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      cursor: pointer;
+    }
+    .btn:active {
+      transform: scale(0.98);
+    }
+    .btn-camp {
+      background-color: #e2f952;
+      color: #121316;
+      border: 2px solid #e2f952;
+      box-shadow: 0 4px 20px rgba(226, 249, 82, 0.35);
+    }
+    .btn-camp .btn-title {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    .btn-camp .btn-sub {
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+    .btn-dark {
+      background-color: #1c1e22;
+      color: #ffffff;
+      border: 1px solid #2e3238;
+    }
+    .btn-dark .btn-title {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .btn-dark .btn-sub {
+      font-size: 12px;
+      color: #9da3af;
+      margin-top: 3px;
+    }
+    .footer {
+      margin-top: 32px;
+      font-size: 12px;
+      color: #6c727f;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Аватарка (ссылку на фото можно вставить позже) -->
+    <div class="avatar-wrapper">
+      <span style="font-size: 36px;">⚡</span>
+    </div>
+
+    <div class="name">Жанна Бессонова</div>
+    <div class="subtitle">Массаж • Питание • Тренировки</div>
+
+    <div class="links-list">
+      <!-- Главная кнопка: Кэмп -->
+      <a href="https://t.me/" target="_blank" class="btn btn-camp">
+        <span class="btn-title">Онлайн-Кэмп: 21 День</span>
+        <span class="btn-sub">Гарвардский метод • Заполнить анкету</span>
+      </a>
+
+      <!-- Запись на массаж -->
+      <a href="https://wa.me/" target="_blank" class="btn btn-dark">
+        <span class="btn-title">Запись на массаж</span>
+        <span class="btn-sub">Кабинет • Оздоровление и тонус</span>
+      </a>
+
+      <!-- Telegram-канал -->
+      <a href="https://t.me/" target="_blank" class="btn btn-dark">
+        <span class="btn-title">Мой Telegram-канал</span>
+        <span class="btn-sub">Полезные советы, разборы и закулисье</span>
+      </a>
+
+      <!-- Прямой диалог -->
+      <a href="https://wa.me/" target="_blank" class="btn btn-dark">
+        <span class="btn-title">Задать вопрос лично</span>
+        <span class="btn-sub">WhatsApp консультация</span>
+      </a>
+    </div>
+
+    <div class="footer">
+      Студия Жанны Бессоновой<br>
+      Красота и здоровье без диет и насилия над собой
+    </div>
+  </div>
+
+</body>
+</html>
