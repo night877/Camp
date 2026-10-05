@@ -1,373 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Жанна Бессонова | Бодикоуч</title>
-
-  <!-- Превью ссылки в Telegram и WhatsApp -->
-  <meta property="og:title" content="Жанна Бессонова | Бодикоуч">
-  <meta property="og:description" content="Онлайн-Кэмп • Личное ведение • Массаж • Фигура и здоровье без диет">
-  <meta property="og:image" content="https://night877.github.io/Camp/InShot_20260902_222545986.jpg">
-  <meta property="og:url" content="https://night877.github.io/Camp/">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#121316">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-    body {
-      background-color: #121316;
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 20px 16px;
-    }
-    .container {
-      width: 100%;
-      max-width: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .avatar-wrapper {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid #e2f952;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 12px;
-      background: #1c1e22;
-      overflow: hidden;
-      box-shadow: 0 0 22px rgba(226, 249, 82, 0.3);
-    }
-    .avatar-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .name {
-      font-size: 21px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-    }
-    .subtitle {
-      font-size: 12px;
-      color: #e2f952;
-      font-weight: 700;
-      letter-spacing: 1.4px;
-      margin-bottom: 18px;
-      text-transform: uppercase;
-    }
-    .links-list {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
-    }
-    .btn {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 16px;
-      text-decoration: none;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: transform 0.15s ease, opacity 0.15s ease;
-      cursor: pointer;
-    }
-    .btn:active {
-      transform: scale(0.98);
-    }
-
-    /* 1. Главная кнопка Кэмпа с пульсацией */
-    .btn-camp {
-      background-color: #e2f952;
-      color: #121316;
-      border: 2px solid #e2f952;
-      animation: pulseGlow 2.6s infinite ease-in-out;
-    }
-    @keyframes pulseGlow {
-      0%, 100% {
-        box-shadow: 0 4px 16px rgba(226, 249, 82, 0.35);
-        transform: scale(1);
-      }
-      50% {
-        box-shadow: 0 6px 26px rgba(226, 249, 82, 0.65);
-        transform: scale(1.012);
-      }
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: rgba(18, 19, 22, 0.12);
-      color: #121316;
-      border: 1px solid rgba(18, 19, 22, 0.2);
-      border-radius: 20px;
-      padding: 2px 8px;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-    .pulse-dot {
-      width: 6px;
-      height: 6px;
-      background-color: #121316;
-      border-radius: 50%;
-      animation: dotBlink 1.4s infinite ease-in-out;
-    }
-    @keyframes dotBlink {
-      0%, 100% { opacity: 0.3; transform: scale(0.8); }
-      50% { opacity: 1; transform: scale(1.2); }
-    }
-    .btn-camp .btn-title {
-      font-size: 15px;
-      text-transform: uppercase;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .btn-camp .btn-sub {
-      font-size: 11.5px;
-      font-weight: 600;
-      opacity: 0.88;
-      margin-top: 3px;
-    }
-
-    /* Тёмные кнопки */
-    .btn-dark {
-      background-color: #1c1e22;
-      color: #ffffff;
-      border: 1px solid #2e3238;
-    }
-    .btn-dark .btn-title {
-      font-size: 14.5px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-    .btn-dark .btn-sub {
-      font-size: 11.5px;
-      color: #9da3af;
-      margin-top: 3px;
-    }
-
-    /* Выделение цен на тёмных кнопках */
-    .btn-personal {
-      border: 1px solid rgba(226, 249, 82, 0.35);
-    }
-    .price-neon {
-      color: #e2f952;
-      font-weight: 800;
-    }
-    .price-discount {
-      color: #cbd1db;
-      font-size: 11px;
-    }
-
-    /* Векторные иконки */
-    .icon {
-      width: 16px;
-      height: 16px;
-      display: inline-block;
-      flex-shrink: 0;
-    }
-    .btn-camp .icon {
-      fill: #121316;
-    }
-    .btn-dark .icon {
-      fill: #e2f952;
-    }
-
-    .footer {
-      margin-top: 24px;
-      font-size: 11.5px;
-      color: #6c727f;
-      line-height: 1.4;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Жанна Бессонова | Студия здоровья и красоты</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0f1115;color:#fff;font-family:system-ui,-apple-system,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:30px 16px 40px}
+.container{width:100%;max-width:480px;display:flex;flex-direction:column;align-items:center}
+.avatar-wrapper{width:110px;height:110px;margin-bottom:16px}
+.avatar-wrapper img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #d4ff00;box-shadow:0 0 20px rgba(212,255,0,0.3)}
+.header{text-align:center;margin-bottom:24px}
+.header h1{font-size:22px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.header p{font-size:13px;color:#d4ff00;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.links{width:100%;display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.btn{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 20px;border-radius:18px;text-decoration:none;text-align:center}
+.btn-flagship{background:rgba(255,255,255,0.04);border:2px solid #d4ff00;color:#fff;box-shadow:0 0 25px rgba(212,255,0,0.25)}
+.btn-flagship .badge{background:#d4ff00;color:#000;padding:4px 12px;border-radius:12px;font-size:11px;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.btn-flagship .title{font-size:18px;font-weight:800;color:#fff;margin-bottom:4px}
+.btn-flagship .sub{font-size:13px;color:#e4e4e7;font-weight:500}
+.btn-flagship .price{color:#d4ff00;font-weight:800}
+.btn-camp{background:#d4ff00;color:#000;box-shadow:0 4px 20px rgba(212,255,0,0.2)}
+.btn-camp .badge{background:rgba(0,0,0,0.15);color:#000;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:6px}
+.btn-camp .title{font-size:17px;font-weight:800;margin-bottom:2px}
+.btn-camp .sub{font-size:12px;opacity:0.85;font-weight:600}
+.btn-sec{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff}
+.btn-sec .title{font-size:16px;font-weight:700;color:#fff;margin-bottom:2px}
+.btn-sec .sub{font-size:12px;color:#a1a1aa}
+.faq-section{width:100%;margin-bottom:32px}
+.faq-section h2{text-align:center;margin-bottom:20px;font-size:19px;font-weight:800;color:#fff}
+.faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:16px;margin-bottom:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.faq-item summary{padding:16px 20px;font-weight:700;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:#111827}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"＋";font-size:18px;color:#6b7280;font-weight:600;margin-left:10px}
+.faq-item[open] summary::after{content:"－"}
+.faq-content{padding:0 20px 20px;color:#374151;line-height:1.6;font-size:14px;border-top:1px solid #f3f4f6;padding-top:14px}
+.faq-content p{margin-bottom:12px}.faq-content p:last-child{margin-bottom:0}.faq-content strong{color:#111827}
+.footer{text-align:center;font-size:13px;color:#71717a;line-height:1.5}
+</style>
 </head>
 <body>
-
-  <div class="container">
-    <!-- Аватарка Жанны -->
-    <div class="avatar-wrapper">
-      <img src="InShot_20260902_222545986.jpg" alt="Жанна Бессонова">
-    </div>
-
-    <div class="name">Жанна Бессонова</div>
-    <div class="subtitle">Массаж • Питание • Тренировки</div>
-
-    <div class="links-list">
-      <!-- 1. Кэмп: Гугл-анкета с ценой -->
-      <a href="https://forms.gle/TcubEVvuEKy4A11UA" target="_blank" class="btn btn-camp">
-        <span class="badge">
-          <span class="pulse-dot"></span> Набор открыт • 2 100 ₽
-        </span>
-        <span class="btn-title">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h8l-1 8 11-12h-8l1-8z"/></svg>
-          Онлайн-Кэмп: 21 День
-        </span>
-        <span class="btn-sub">Гарвардский метод • 2 100 ₽ • Заполнить анкету</span>
-      </a>
-
-      <!-- 2. Индивидуальное ведение: Большая анкета с ценами -->
-      <a href="https://forms.gle/E415LJ9eEvjvaDz18" target="_blank" class="btn btn-dark btn-personal">
-        <span class="btn-title">
-          <!-- Иконка персональной работы -->
-          <svg class="icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          Индивидуальное ведение
-        </span>
-        <span class="btn-sub">
-          <span class="price-neon">7 500 ₽ / мес</span> <span class="price-discount">(за 4 месяца — 25 000 ₽)</span>
-        </span>
-      </a>
-
-      <!-- 3. Запись на массаж: Личка в Telegram -->
-      <a href="https://t.me/ZHANNA_BESSONOVA" target="_blank" class="btn btn-dark">
-        <span class="btn-title">
-          <!-- Иконка релакса/оздоровления -->
-          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z"/></svg>
-          Запись на массаж
-        </span>
-        <span class="btn-sub">Кабинет • Оздоровление и тонус</span>
-      </a>
-
-      <!-- 4. Telegram-канал -->
-      <a href="https://t.me/zhannabessonova82" target="_blank" class="btn btn-dark">
-        <span class="btn-title">
-          <!-- Иконка Telegram -->
-          <svg class="icon" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.2 1.166-.222 1.467l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.46 0 .663-.211.921-.46l2.211-2.15 4.6 3.4c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.423z"/></svg>
-          Мой Telegram-канал
-        </span>
-        <span class="btn-sub">Полезные советы, разборы и закулисье</span>
-      </a>
-    </div>
-<!-- Блок FAQ (Ответы на вопросы) -->
-<section class="faq-section" style="max-width: 800px; margin: 40px auto; padding: 0 16px; font-family: system-ui, -apple-system, sans-serif;">
-  <h2 style="text-align: center; margin-bottom: 24px; font-size: 22px; font-weight: 700; color: #111827;">Часто задаваемые вопросы</h2>
-
-  <style>
-    .faq-item {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      margin-bottom: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-    }
-    .faq-item summary {
-      padding: 16px 20px;
-      font-weight: 600;
-      font-size: 15px;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #111827;
-    }
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-    .faq-item summary::after {
-      content: "＋";
-      font-size: 18px;
-      color: #9ca3af;
-      font-weight: 400;
-    }
-    .faq-item[open] summary::after {
-      content: "－";
-    }
-    .faq-content {
-      padding: 0 20px 20px 20px;
-      color: #374151;
-      line-height: 1.6;
-      font-size: 14px;
-    }
-    .faq-content p {
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
-    .faq-content p:last-child {
-      margin-bottom: 0;
-    }
-  </style>
-
-  <!-- Вопрос 1 -->
-  <details class="faq-item">
-    <summary>1. Что я получу за 21 день Кэмпа?</summary>
-    <div class="faq-content">
-      <p><strong>1. Перестанешь каждый день гадать, что приготовить себе, если хочешь снизить вес.</strong><br>
-      Научишься собирать сытные приёмы пищи из привычных продуктов — без сухой грудки и отдельного меню для себя.</p>
-      
-      <p><strong>2. Разберёшься со своими пищевыми привычками.</strong><br>
-      На практике посмотрим, когда ты остаёшься голодной, почему к вечеру хочется сладкого и что можно изменить без голодовок и жёстких запретов. Если твоя цель — снизить вес, эти шаги помогут начать двигаться к ней в комфортном темпе.</p>
-      
-      <p><strong>3. Получишь поддержку на всём пути.</strong><br>
-      В группе будут люди, у которых тоже есть дети, работа и куча дел. Я даю обратную связь и помогаю возвращаться к плану, даже если какой-то день пошёл не так.</p>
-    </div>
-  </details>
-
-  <!-- Вопрос 2 -->
-  <details class="faq-item">
-    <summary>2. Чем Кэмп отличается от Личного ведения?</summary>
-    <div class="faq-content">
-      <p><strong>Кэмп (2 100 ₽ / мес) — групповой формат на 21 день:</strong><br>
-      Доступ в закрытый Telegram-канал с необходимой базой знаний для освоения навыка сбора тарелки, базой рецептов, общей поддержкой в чате и моей обратной связью по вашим ежедневно сданным отчётам.<br>
-      <em>Это формат, где осваивается практический навык. Мы не высчитываем индивидуальных планок, не ведём подсчёт калорий и не разрабатываем персональный план питания. Мы учимся основному навыку — собирать сбалансированную тарелку.</em></p>
-      
-      <p><strong>Личное ведение (7 500 ₽ / мес или 25 000 ₽ за 4 месяца):</strong><br>
-      Индивидуальная работа тет-а-тет. Полный аудит твоего образа жизни, расчёт индивидуальной планки по калориям, корректировка плана питания, ежедневный личный разбор приёмов пищи и ответы на вопросы по питанию.</p>
-    </div>
-  </details>
-
-  <!-- Вопрос 3 -->
-  <details class="faq-item">
-    <summary>3. А если у меня нет времени готовить сложные блюда?</summary>
-    <div class="faq-content">
-      <p>Вы не готовите сложные блюда! В Кэмпе мы учимся собирать сбалансированную тарелку из тех продуктов, которые уже есть у вас дома и которые вы привыкли есть каждый день.</p>
-      <p>Никакой «экзотики», которую нужно выискивать в специальных отделах. Все предлагаемые рецепты максимально просты и адаптированы под реалии современного темпа жизни.</p>
-    </div>
-  </details>
-
-  <!-- Вопрос 4 -->
-  <details class="faq-item">
-    <summary>4. Нужно ли покупать абонемент в фитнес-клуб?</summary>
-    <div class="faq-content">
-      <p>Нет, спортзал не обязателен! 80% успеха в снижении веса и качестве кожи зависит от сбалансированного рациона. Мы сделаем упор на питание и комфортную ежедневную активность (шаги, разминка).</p>
-    </div>
-  </details>
-
-  <!-- Вопрос 5 -->
-  <details class="faq-item">
-    <summary>5. Как всё проходит после оплаты?</summary>
-    <div class="faq-content">
-      <p>Сразу после оплаты ты получаешь ссылку-приглашение в закрытый Telegram-канал. Там тебя уже ждут вводные материалы и гайд по подготовке, а 12 октября мы официально начинаем!</p>
-    </div>
-  </details>
-</section>
-    <div class="footer">
-      Студия Жанны Бессоновой<br>
-      Красота и здоровье без диет
-    </div>
+<div class="container">
+  <div class="avatar-wrapper"><img src="avatar.jpg" alt="Жанна Бессонова"></div>
+  <div class="header"><h1>Жанна Бессонова</h1><p>Массаж • Питание • Тренировки</p></div>
+  <div class="links">
+    <a href="https://t.me/ZHANNA_BESSONOVA" class="btn btn-flagship">
+      <span class="badge">🔥 Флагман • Личный разбор с Жанной</span>
+      <span class="title">👤 ИНДИВИДУАЛЬНОЕ ВЕДЕНИЕ</span>
+      <span class="sub">Аудит, планка калорий, работа тет-а-тет • <span class="price">7 500 ₽/мес</span></span>
+    </a>
+    <a href="https://t.me/ZHANNABESSONOVA_BOT" class="btn btn-camp">
+      <span class="badge">🚀 Набор открыт • 21 день</span>
+      <span class="title">⚡️ ОНЛАЙН-КЭМП: 21 ДЕНЬ</span>
+      <span class="sub">Гарвардский метод • 2 100 ₽ • Заполнить анкету</span>
+    </a>
+    <a href="https://t.me/ZHANNA_BESSONOVA" class="btn btn-sec">
+      <span class="title">✨ Запись на массаж</span>
+      <span class="sub">Кабинет • Оздоровление и тонус</span>
+    </a>
+    <a href="https://t.me/zhannabessonova" class="btn btn-sec">
+      <span class="title">📢 Мой Telegram-канал</span>
+      <span class="sub">Полезные советы, разборы и закулисье</span>
+    </a>
   </div>
-
+  <section class="faq-section">
+    <h2>Часто задаваемые вопросы</h2>
+    <details class="faq-item">
+      <summary>1. Что я получу за 21 день Кэмпа?</summary>
+      <div class="faq-content">
+        <p><strong>1. Перестанешь каждый день гадать, что приготовить себе, если хочешь снизить вес.</strong><br>Научишься собирать сытные приёмы пищи из привычных продуктов — без сухой грудки и отдельного меню для себя.</p>
+        <p><strong>2. Разберёшься со своими пищевыми привычками.</strong><br>На практике посмотрим, когда ты остаёшься голодной, почему к вечеру хочется сладкого и что можно изменить без голодовок и жёстких запретов. Если твоя цель — снизить вес, эти шаги помогут начать двигаться к ней в комфортном темпе.</p>
+        <p><strong>3. Получишь поддержку на всём пути.</strong><br>В группе будут люди, у которых тоже есть дети, работа и куча дел. Я даю обратную связь и помогаю возвращаться к плану, даже если какой-то день пошёл не так.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary>2. Чем Кэмп отличается от Личного ведения?</summary>
+      <div class="faq-content">
+        <p><strong>Кэмп (2 100 ₽ / мес) — групповой формат на 21 день:</strong><br>Доступ в закрытый Telegram-канал с необходимой базой знаний для освоения навыка сбора тарелки, базой рецептов, общей поддержкой в чате и моей обратной связью по вашим ежедневно сданным отчётам.<br><em>Это формат, где осваивается практический навык. Мы не высчитываем индивидуальных планок, не ведём подсчёт калорий и не разрабатываем персональный план питания. Мы учимся основному навыку — собирать сбалансированную тарелку.</em></p>
+        <p><strong>Личное ведение (7 500 ₽ / мес или 25 000 ₽ за 4 месяца):</strong><br>Индивидуальная работа тет-а-тет. Полный аудит твоего образа жизни, расчёт индивидуальной планки по калориям, корректировка плана питания, ежедневный личный разбор приёмов пищи и ответы на вопросы по питанию.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary>3. А если у меня нет времени готовить сложные блюда?</summary>
+      <div class="faq-content">
+        <p>Вы не готовите сложные блюда! В Кэмпе мы учимся собирать сбалансированную тарелку из тех продуктов, которые уже есть у вас дома и которые вы привыкли есть каждый день.</p>
+        <p>Никакой «экзотики», которую нужно выискивать в специальных отделах. Все предлагаемые рецепты максимально просты и адаптированы под реалии современного темпа жизни.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary>4. Нужно ли покупать абонемент в фитнес-клуб?</summary>
+      <div class="faq-content">
+        <p>Нет, спортзал не обязателен! 80% успеха в снижении веса и качестве кожи зависит от сбалансированного рациона. Мы сделаем упор на питание и комфортную ежедневную активность (шаги, разминка).</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary>5. Как всё проходит после оплаты?</summary>
+      <div class="faq-content">
+        <p>Сразу после оплаты ты получаешь ссылку-приглашение в закрытый Telegram-канал. Там тебя уже ждут вводные материалы и гайд по подготовке, а 12 октября мы официально начинаем!</p>
+      </div>
+    </details>
+  </section>
+  <div class="footer">Студия Жанны Бессоновой<br>Красота и здоровье без диет</div>
+</div>
 </body>
 </html>
