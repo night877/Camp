@@ -13,7 +13,7 @@ body{background:#0f1115;color:#fff;font-family:system-ui,-apple-system,sans-seri
 .header{text-align:center;margin-bottom:24px}
 .header h1{font-size:22px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
 .header p{font-size:13px;color:#d4ff00;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-.links{width:100%;display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.links{width:100%;display:flex;flex-direction:column;gap:16px;margin-bottom:16px}
 .btn{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 20px;border-radius:18px;text-decoration:none;text-align:center}
 .btn-flagship{background:rgba(255,255,255,0.04);border:2px solid #d4ff00;color:#fff;box-shadow:0 0 25px rgba(212,255,0,0.25)}
 .btn-flagship .badge{background:#d4ff00;color:#000;padding:6px 14px;border-radius:12px;font-size:14px;font-weight:900;text-transform:uppercase;margin-bottom:8px;letter-spacing:0.5px}
@@ -27,6 +27,13 @@ body{background:#0f1115;color:#fff;font-family:system-ui,-apple-system,sans-seri
 .btn-sec{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff}
 .btn-sec .title{font-size:16px;font-weight:700;color:#fff;margin-bottom:2px}
 .btn-sec .sub{font-size:12px;color:#a1a1aa}
+
+/* Блок соцсетей */
+.social-links{width:100%;display:flex;justify-content:center;align-items:center;gap:14px;margin-bottom:32px}
+.social-btn{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#a1a1aa;text-decoration:none;transition:all 0.2s ease}
+.social-btn:hover{border-color:#d4ff00;color:#d4ff00;background:rgba(212,255,0,0.05);transform:translateY(-2px)}
+.social-btn svg{width:24px;height:24px;fill:currentColor}
+
 .faq-section{width:100%;margin-bottom:32px}
 .faq-section h2{text-align:center;margin-bottom:20px;font-size:19px;font-weight:800;color:#fff}
 .faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:16px;margin-bottom:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
@@ -62,6 +69,20 @@ body{background:#0f1115;color:#fff;font-family:system-ui,-apple-system,sans-seri
       <span class="sub">Полезные советы, разборы и закулисье</span>
     </a>
   </div>
+
+  <!-- Ряд иконoк соцсетей -->
+  <div class="social-links">
+    <a href="https://www.instagram.com/bessonovabody?rpxt=aG9rc283MG40dTUy" target="_blank" class="social-btn" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://vk.ru/club238824507" target="_blank" class="social-btn" aria-label="ВКонтакте">
+      <svg viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.644c-.623 0-.814-.496-1.932-1.615-1.12-1.119-1.614-1.266-1.895-1.266-.393 0-.505.112-.505.659v1.542c0 .421-.14.68-.126.68h-1.053c-2.288 0-4.81-1.389-6.591-3.955C3.76 10.375 2.652 7.74 2.652 7.291c0-.253.098-.491.59-.491h1.644c.435 0 .59.197.758.673.828 2.412 2.217 4.524 2.792 4.524.211 0 .309-.098.309-.631V9.087c-.07-.1.35-.35 1.052-.35h.505c.323 0 .534.211.534.421v2.792c0 .309.14.421.225.421.211 0 .393-.112.786-.505 1.207-1.361 2.063-3.458 2.063-3.458.112-.253.309-.491.744-.491h1.644c.491 0 .604.253.491.604-.211.982-2.274 3.885-2.274 3.885-.182.281-.253.421 0 .758.182.253.786.772 1.193 1.235.744.842 1.319 1.557 1.473 2.048.154.492-.084.744-.575.744z"/></svg>
+    </a>
+    <a href="https://youtube.com/channel/UCb3cfzyu30YXtl4VBma9oHQ?si=Eq9NfP14ZeFPaJLd" target="_blank" class="social-btn" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+  </div>
+
   <section class="faq-section">
     <h2>Часто задаваемые вопросы</h2>
     <details class="faq-item">
