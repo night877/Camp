@@ -57,9 +57,12 @@ body{background:#0f1115;color:#fff;font-family:system-ui,-apple-system,sans-seri
 .footer{text-align:center;font-size:13px;color:#71717a;line-height:1.5}
 .footer a{color:#a1a1aa;font-size:12px}
 .footer .req{font-size:12px;color:#71717a;margin-top:8px}
-.club-card{cursor:default}
-.club-card b{color:#d4ff00}
-.club-card a{color:#a1a1aa}
+.btn-club{background:rgba(212,255,0,0.06);border:1px solid rgba(212,255,0,0.45);color:#fff}
+.btn-club .badge{background:rgba(212,255,0,0.15);color:#d4ff00;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:800;text-transform:uppercase;margin-bottom:6px}
+.btn-club .title{font-size:16px;font-weight:800;margin-bottom:4px}
+.btn-club .sub{font-size:12px;color:#d4d4d8;line-height:1.45}
+.btn-club b{color:#d4ff00}
+.btn-club .cta{color:#d4ff00;font-weight:700;display:inline-block;margin-top:6px}
 </style>
 </head>
 <body>
@@ -69,17 +72,18 @@ body{background:#0f1115;color:#fff;font-family:system-ui,-apple-system,sans-seri
   <div class="links">
     <a href="https://t.me/sytnaya_tarelka_help_bot?start=brief" class="btn btn-flagship">
       <span class="badge">👤 ИНДИВИДУАЛЬНОЕ ВЕДЕНИЕ</span>
-      <span class="sub">Аудит, планка калорий, работа тет-а-тет<br><span class="price">7&nbsp;500&nbsp;₽/мес</span> <span class="discount">(за 4 месяца — 25&nbsp;000&nbsp;₽)</span><br><span class="cta">Заполнить анкету в Telegram →</span></span>
+      <span class="sub">Аудит, планка калорий, работа тет-а-тет<br><span class="price">7&nbsp;500&nbsp;₽/мес</span> <span class="discount">(за 4 месяца — 25&nbsp;000&nbsp;₽)</span><br><span class="cta">Анкета и оплата в Telegram →</span></span>
     </a>
     <a href="https://t.me/sytnaya_tarelka_help_bot?start=camp" class="btn btn-camp">
       <span class="badge">🚀 Набор открыт • 21 день</span>
       <span class="title">⚡️ ОНЛАЙН-КЭМП: 21 ДЕНЬ</span>
-      <span class="sub">Гарвардский метод • 2 100 ₽ • Записаться в Telegram</span>
+      <span class="sub">Гарвардский метод • 2 100 ₽ • Записаться и оплатить в Telegram</span>
     </a>
-    <div class="btn btn-sec club-card">
-      <span class="title">🔒 Закрытый клуб · скоро</span>
-      <span class="sub">Энциклопедия здоровья с аудио, «Тарелка из холодильника», ежедневный разбор тарелок, вопросы Жанне<br><b>2&nbsp;500&nbsp;₽/мес</b> · <a href="oferta.html">условия и возврат</a></span>
-    </div>
+    <a href="https://t.me/sytnaya_tarelka_help_bot?start=club" class="btn btn-club">
+      <span class="badge">🔓 Набор открыт</span>
+      <span class="title">🍽 Клуб «В своей тарелке»</span>
+      <span class="sub">Энциклопедия здоровья с аудио • «Тарелка из холодильника» • ежедневный разбор тарелок • вопросы Жанне<br><b>2&nbsp;500&nbsp;₽/мес</b> · без автосписаний<br><span class="cta">Вступить в Telegram →</span></span>
+    </a>
     <a href="https://t.me/ZHANNA_BESSONOVA" class="btn btn-sec">
       <span class="title">✨ Запись на массаж</span>
       <span class="sub">Кабинет • Оздоровление и тонус</span>
@@ -114,10 +118,11 @@ body{background:#0f1115;color:#fff;font-family:system-ui,-apple-system,sans-seri
       </div>
     </details>
     <details class="faq-item">
-      <summary>2. Чем Кэмп отличается от Личного ведения?</summary>
+      <summary>2. Чем отличаются Кэмп, Клуб и Личное ведение?</summary>
       <div class="faq-content">
         <p><strong>Кэмп (2 100 ₽ за 21 день) — групповой формат:</strong><br>Доступ в закрытый Telegram-канал с простыми рецептами, общей поддержкой в чате и моей обратной связью по твоим ежедневным отчётам. Это знакомство со мной и база: как собрать сытную тарелку, при том что есть можно всё.<br><em>Это формат, где осваивается практический навык. Мы не высчитываем индивидуальных планок, не ведём подсчёт калорий и не разрабатываем персональный план питания. Мы учимся основному навыку — собирать сбалансированную тарелку.</em></p>
         <p><strong>Личное ведение (7 500 ₽ / мес или 25 000 ₽ за 4 месяца):</strong><br>Индивидуальная работа тет-а-тет. Полный аудит твоего образа жизни, расчёт индивидуальной планки по калориям, корректировка плана питания, ежедневный личный разбор приёмов пищи и ответы на вопросы по питанию.</p>
+        <p><strong>Клуб «В своей тарелке» (2 500 ₽ / мес):</strong><br>Для тех, кто хочет держать результат самостоятельно: Энциклопедия здоровья (48 глав, каждую можно слушать), «Тарелка из холодильника», разбор тарелки раз в день, ответы на вопросы и компания единомышленников. Подходит и мужчинам.</p>
       </div>
     </details>
     <details class="faq-item">
@@ -134,9 +139,13 @@ body{background:#0f1115;color:#fff;font-family:system-ui,-apple-system,sans-seri
       </div>
     </details>
     <details class="faq-item">
-      <summary>5. Как всё проходит после оплаты?</summary>
+      <summary>5. Как оплатить и что происходит после оплаты?</summary>
       <div class="faq-content">
-        <p>Сразу после оплаты ты получаешь ссылку-приглашение в закрытый Telegram-канал. Там тебя уже ждут вводные материалы и гайд по подготовке, а дату старта ближайшего потока я заранее объявлю в канале.</p>
+        <p>Оплата — прямо в Telegram-боте, картой или через СБП (сервис Robokassa), чек приходит сразу.</p>
+        <p><strong>Кэмп:</strong> бот подтвердит оплату, а я лично напишу тебе в течение дня и добавлю в канал и чат потока до старта.</p>
+        <p><strong>Клуб:</strong> бот сразу пришлёт личную ссылку для входа в группу.</p>
+        <p><strong>Ведение:</strong> заполняешь анкету в боте, я изучаю её и пишу тебе — дальше работаем тет-а-тет.</p>
+        <p>Автосписаний нет. Условия возврата — в <a href="oferta.html">оферте</a>.</p>
       </div>
     </details>
   </section>
